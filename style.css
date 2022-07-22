@@ -159,6 +159,7 @@ h2 {
     align-items: center;
 
     grid-template-columns: 2fr;
+    grid-template-rows: auto;
     column-gap: 50px;
     row-gap: 50px;
   }
