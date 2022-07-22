@@ -8,8 +8,6 @@
   color: #495057;
 }
 
-/* main: #1971c2 */
-
 body {
   font-family: "lato", sans-serif;
   color: #343a40;
@@ -52,17 +50,6 @@ body {
   }
 }
 
-.flex-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  gap: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: 100px;
-}
-
 /* About */
 h1 {
   font-size: 48px;
@@ -82,7 +69,6 @@ p {
 
 a {
   font-size: 24px;
-  /* font-weight: bold; */
 }
 
 a:link,
@@ -103,7 +89,6 @@ a:active {
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-  /* margin-bottom: 54px; */
 }
 
 .about-links > a {
@@ -153,14 +138,13 @@ h2 {
 @media (max-width: 900px) {
   .page-content {
     display: grid;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
 
     align-items: center;
 
     grid-template-columns: 2fr;
     grid-template-rows: auto;
-    column-gap: 50px;
     row-gap: 50px;
   }
 
