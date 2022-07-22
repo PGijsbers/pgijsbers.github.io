@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+.grey {
+  color: #495057;
+}
+
+/* main: #1971c2 */
+
+body {
+  font-family: "lato", sans-serif;
+  color: #343a40;
+}
+
+.page-content {
+  display: grid;
+  align-items: center;
+
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 50px;
+}
+
+.pfp {
+  grid-row: 1 / -1;
+  order: 0;
+}
+
+.about {
+  order: 1;
+}
+
+.contact {
+  order: 2;
+}
+
+@media (max-width: 900px) {
+  .pfp {
+    grid-row: 2;
+    order: 1;
+  }
+
+  .about {
+    order: 0;
+  }
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 100px;
+}
+
+/* About */
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.pfp {
+  width: 100%;
+  border-radius: 10px;
+}
+
+a {
+  font-size: 24px;
+  /* font-weight: bold; */
+}
+
+a:link,
+a:visited {
+  color: #1971c2;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: #1971c2;
+  text-decoration: underline;
+}
+
+.about-links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  /* margin-bottom: 54px; */
+}
+
+.about-links > a {
+  border: 5px solid #495057;
+  border-radius: 10px;
+  padding: 12px;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #495057;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.about-links > a:link,
+.about-links > a:visited {
+  border: 5px solid #495057;
+  border-radius: 10px;
+  padding: 12px;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #495057;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.about-links > a:hover,
+.about-links > a:active {
+  background-color: #eee;
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 12px;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 900px) {
+  .page-content {
+    display: grid;
+    margin-left: 50px;
+    margin-right: 50px;
+
+    align-items: center;
+
+    grid-template-columns: 2fr;
+    column-gap: 50px;
+    row-gap: 50px;
+  }
+
+  .about-links {
+    justify-content: center;
+  }
+}
