@@ -95,9 +95,11 @@ a:active {
   border: 5px solid #495057;
   border-radius: 10px;
   padding: 12px;
+  width: 7.5em;
 
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   color: #495057;
   font-weight: bold;
   font-size: 28px;
