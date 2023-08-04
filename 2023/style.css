@@ -47,6 +47,19 @@ p {
     row-gap: 10px;
 }
 
+.contact-grid {
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    column-gap: 20px;
+    row-gap: 20px;
+
+    justify-items: center;
+    align-items: center;
+}
 
 @media (max-width: 900px) {
     .page-layout {
