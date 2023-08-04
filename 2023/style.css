@@ -14,9 +14,14 @@ p {
     font-family: "lato", sans-serif;
 }
 
-.header > * {
+.content-header, .content-footer {
+    grid-column: 1 / -1;
+}
+
+.content-header > *, .content-footer > *  {
     text-align: center;
 }
+
 
 .page-layout {
     margin-top: 50px;
@@ -42,6 +47,7 @@ p {
     row-gap: 10px;
 }
 
+
 @media (max-width: 900px) {
     .page-layout {
         grid-template-columns: 1fr;
@@ -52,9 +58,6 @@ p {
     /*}*/
 }
 
-.header {
-    grid-column: 1 / -1;
-}
 
 .tile {
     width: 100%;
