@@ -47,24 +47,3 @@
     border-radius: 40px;
     width: 100%;
 }
-
-.pfp {
-    background-color: green;
-    columns: 1;
-}
-
-.papers {
-    background-color: blue;
-    columns: 2;
-}
-
-.software {
-    background-color: purple;
-    columns: 1;
-}
-
-.about {
-    background-color: orange;
-    grid-row: 2;
-}
-
