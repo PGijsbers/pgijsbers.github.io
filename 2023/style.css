@@ -5,6 +5,19 @@
     font-size: 18px;
 }
 
+h1 {
+    font-family: "lato", sans-serif;
+    font-size: 24pt;
+}
+
+p {
+    font-family: "lato", sans-serif;
+}
+
+.header > * {
+    text-align: center;
+}
+
 .page-layout {
     margin-top: 50px;
     margin-left: 50px;
