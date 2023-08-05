@@ -61,6 +61,21 @@ p {
     align-items: center;
 }
 
+.contact-item {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-logo {
+    width: 50%;
+    height: 50%;
+    /*background-color: black;*/
+}
+
 @media (max-width: 900px) {
     .page-layout {
         grid-template-columns: 1fr;
