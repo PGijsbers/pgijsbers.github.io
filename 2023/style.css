@@ -17,8 +17,14 @@ h2 {
     color: #343a40;
 }
 
-p {
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
 
+a {
+    font-size: inherit;
 }
 
 .content-header, .content-footer {
