@@ -28,7 +28,8 @@ p {
     border-radius: 40px;
 
     display: flex;
-
+    flex-direction: column;
+    gap: 10px;
 }
 
 
@@ -64,32 +65,20 @@ p {
     row-gap: 10px;
 }
 
-.contact-grid {
-    height: 100%;
+.contact-row {
+    height: 40px;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-
-    column-gap: 20px;
-    row-gap: 20px;
-
-    justify-items: center;
-    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .contact-item {
     height: 100%;
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .contact-logo {
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 80%;
     /*background-color: black;*/
 }
 
