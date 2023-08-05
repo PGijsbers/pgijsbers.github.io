@@ -22,6 +22,10 @@ p {
     text-align: center;
 }
 
+.about-tile {
+    grid-column: 1 / -1;
+    aspect-ratio: 2 / 1;
+}
 
 .page-layout {
     margin-top: 50px;
