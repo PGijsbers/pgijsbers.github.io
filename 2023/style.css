@@ -22,6 +22,16 @@ p {
     text-align: center;
 }
 
+.content-footer {
+    border: 2px solid #343a40;
+    padding: 40px;
+    border-radius: 40px;
+
+    display: flex;
+
+}
+
+
 .about-tile {
     grid-column: 1 / -1;
 }
