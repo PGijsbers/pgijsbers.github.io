@@ -98,7 +98,7 @@ a {
 
 @media (max-width: 900px) {
     .page-layout {
-        grid-template-columns: 1fr;
+        grid-template-columns: 5vh 1fr 5vh;
     }
 }
 
@@ -154,26 +154,10 @@ a:hover > .overlay {
     grid-column: 2 / 3;
 }
 
-.about-nav {
-    display: flex;
-}
-
-.flex-1 {
-    flex: 1;
-}
-
-.nav-link {
-    padding: 5px;
-
-    text-transform: uppercase;
-    border-radius: 10px;
-    color: #fff;
-    background-color: #212529;
-}
-
 .home-button {
     background-color: #212529;
-    border-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     padding: 10px;
 
     color: #fff;
@@ -191,4 +175,6 @@ a:hover > .overlay {
 
     justify-content: center;
     align-items: center;
+
+    gap: 10px;
 }
