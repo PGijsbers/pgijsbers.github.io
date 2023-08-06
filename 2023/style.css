@@ -176,5 +176,25 @@ a:hover > .overlay {
     justify-content: center;
     align-items: center;
 
-    gap: 10px;
+    gap: 20px;
+}
+
+.about-with-picture {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 10vh;
+}
+
+.portrait-picture {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.flex-1{
+    flex: 1;
+}
+
+.flex-3 {
+    flex: 3;
 }
