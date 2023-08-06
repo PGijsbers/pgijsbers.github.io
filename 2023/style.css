@@ -179,22 +179,9 @@ a:hover > .overlay {
     gap: 20px;
 }
 
-.about-with-picture {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    gap: 10vh;
-}
-
 .portrait-picture {
-    width: 100%;
+    width: min(30vw, 200px);
     border-radius: 20px;
-}
-
-.flex-1{
-    flex: 1;
-}
-
-.flex-3 {
-    flex: 3;
+    float:right;
+    margin-left: 20px;
 }
