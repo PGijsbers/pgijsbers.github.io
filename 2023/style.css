@@ -2,29 +2,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 18px;
     font-family: "lato", sans-serif;
     color: #495057;
 }
 
+html {
+    font-size: 18px;
+}
+
 h1 {
-    font-size: 24pt;
     color: #212529;
 }
 
 h2 {
-    font-size: 22px;
     color: #343a40;
 }
 
 footer {
-    margin-top: 20px;
+    margin-top: 1.2rem;
     text-align: center;
-    font-size: 14px;
-}
-
-a {
-    font-size: inherit;
+    font-size: 0.8em;
 }
 
 .content-header, .content-footer {
@@ -36,17 +33,17 @@ a {
 }
 
 .content-header {
-    margin-top: 50px;
+    margin-top: 2em;
 }
 
 .content-footer {
-    border: 2px solid #343a40;
-    padding: 40px;
+    border: 0.15em solid #343a40;
+    padding: 2em;
     border-radius: 40px;
 
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.6rem;
 }
 
 
@@ -69,12 +66,12 @@ a {
 
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    column-gap: 10px;
-    row-gap: 10px;
+    column-gap: 0.6em;
+    row-gap: 0.6em;
 }
 
 .contact-row {
-    height: 40px;
+    height: 2em;
 
     display: flex;
     justify-content: center;
@@ -88,20 +85,6 @@ a {
     width: 80%;
     height: 80%;
 }
-
-@media (max-width: 500px) {
-    .page-content {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-@media (max-width: 900px) {
-    .page-layout {
-        grid-template-columns: 5vh 1fr 5vh;
-    }
-}
-
 
 .tile {
     width: 100%;
@@ -136,14 +119,14 @@ a:hover > .overlay {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: max(40px, 20%);
+    height: max(1.8em, 20%);
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     color: #fff;
-    font-size: 20px;
+    font-size: 1.2em;
 }
 
 .upper-case {
@@ -158,7 +141,7 @@ a:hover > .overlay {
     background-color: #212529;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    padding: 10px;
+    padding: 0.6em;
 
     color: #fff;
     text-transform: uppercase;
@@ -176,12 +159,25 @@ a:hover > .overlay {
     justify-content: center;
     align-items: center;
 
-    gap: 20px;
+    gap: 1.1em;
 }
 
 .portrait-picture {
     width: min(30vw, 200px);
     border-radius: 20px;
     float:right;
-    margin-left: 20px;
+    margin-left: 1.1em;
+}
+
+@media (max-width: 500px) {
+    .page-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .page-layout {
+        grid-template-columns: 5vh 1fr 5vh;
+    }
 }
