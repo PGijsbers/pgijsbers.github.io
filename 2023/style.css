@@ -57,17 +57,12 @@ footer {
     grid-column: 1 / -1;
 }
 
-.page-layout {
-    display: grid;
-    align-items: center;
-
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: auto;
+/* Scale padding from 10vw (at 500px) to 25vw (at 1200px), based on eye-balling. */
+.centered-column {
+  padding: 0 clamp(10vw, calc(300px - (1200px - 100vw) / 2.8), 25vw);
 }
 
 .page-content {
-    grid-column: 2 / 3;
-
     display: grid;
 
     grid-template-columns: 1fr 1fr;
@@ -178,12 +173,5 @@ a:hover > .overlay {
 @media (max-width: 500px) {
     .page-content {
         grid-template-columns: 1fr;
-    }
-}
-
-
-@media (max-width: 900px) {
-    .page-layout {
-        grid-template-columns: 5vh 1fr 5vh;
     }
 }
