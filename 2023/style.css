@@ -17,6 +17,7 @@ html {
 
 h1 {
     color: #212529;
+    padding-bottom: 0.25em;
 }
 
 
@@ -184,7 +185,7 @@ a:hover > .overlay {
 .portrait-picture {
     width: min(30vw, 200px);
     border-radius: 20px;
-    float:right;
+    float: right;
     margin-left: 1.1em;
 }
 
