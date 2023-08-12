@@ -24,6 +24,10 @@ h2 {
     color: #343a40;
 }
 
+p {
+    padding-bottom: 0.8em;
+}
+
 address {
     font-style: normal;
 }
@@ -184,3 +188,6 @@ a:hover > .overlay {
     margin-left: 1.1em;
 }
 
+.no-padding-bottom {
+    padding-bottom: 0;
+}
