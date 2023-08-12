@@ -24,17 +24,28 @@ h2 {
     color: #343a40;
 }
 
+address {
+    font-style: normal;
+}
+
 footer {
-    margin-top: 1.2rem;
     text-align: center;
     font-size: 0.8em;
+    padding-bottom: 1rem;
+
+    /* Together with min-height of 100vh of the flex-container parent
+    this ensures that the footer is always placed at the bottom.
+    */
+    margin-top: auto;
+
 }
 
-.content-header, .content-footer {
-    grid-column: 1 / -1;
+/* Scale padding from 10vw (at 500px) to 25vw (at 1200px), based on eye-balling. */
+.centered-column {
+  margin: 0 clamp(10vw, calc(300px - (1200px - 100vw) / 2.8), 25vw);
 }
 
-.content-header > *, .content-footer > *  {
+.content-header > *, .contact-container > *  {
     text-align: center;
 }
 
@@ -42,9 +53,9 @@ footer {
     margin-top: 2em;
 }
 
-.content-footer {
+.contact-container {
     border: 0.15em solid #343a40;
-    padding: 2em;
+    padding: 1em 2em;
     border-radius: 40px;
 
     display: flex;
@@ -57,12 +68,7 @@ footer {
     grid-column: 1 / -1;
 }
 
-/* Scale padding from 10vw (at 500px) to 25vw (at 1200px), based on eye-balling. */
-.centered-column {
-  padding: 0 clamp(10vw, calc(300px - (1200px - 100vw) / 2.8), 25vw);
-}
-
-.page-content {
+.collapsing-grid {
     display: grid;
 
     grid-template-columns: 1fr 1fr;
@@ -70,6 +76,13 @@ footer {
     column-gap: 0.6em;
     row-gap: 0.6em;
 }
+
+@media(max-width: 500px) {
+    .collapsing-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 .contact-row {
     height: 2em;
@@ -157,10 +170,11 @@ a:hover > .overlay {
     display: flex;
     flex-direction: column;
 
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: stretch;
 
     gap: 1.1em;
+    min-height: 100vh;
 }
 
 .portrait-picture {
@@ -170,8 +184,3 @@ a:hover > .overlay {
     margin-left: 1.1em;
 }
 
-@media (max-width: 500px) {
-    .page-content {
-        grid-template-columns: 1fr;
-    }
-}
