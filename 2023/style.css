@@ -152,10 +152,6 @@ a:hover > .overlay {
     text-transform: uppercase;
 }
 
-.column-2 {
-    grid-column: 2 / 3;
-}
-
 .home-button {
     background-color: #212529;
     border-bottom-left-radius: 15px;
@@ -167,8 +163,15 @@ a:hover > .overlay {
     text-decoration: none;
 }
 
+.home-button:hover {
+    padding-top: 1em;
+    transition-duration: 0.5s;
+}
+
 .start-aligned {
-    align-self: flex-start;
+    display: flex;
+    align-items: start;
+    height: 3em;
 }
 
 .vertical-flex {
