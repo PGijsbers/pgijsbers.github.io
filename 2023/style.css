@@ -26,11 +26,17 @@
 
 @media(prefers-color-scheme: dark) {
    :root {
-        --adaptive-background-color: var(--dark-background-color);
-        --adaptive-header-1-color: var(--dark-header-1-color);
-        --adaptive-header-2-color: var(--dark-header-2-color);
-        --adaptive-text-color: var(--dark-text-color);
+       --adaptive-background-color: var(--dark-background-color);
+       --adaptive-header-1-color: var(--dark-header-1-color);
+       --adaptive-header-2-color: var(--dark-header-2-color);
+       --adaptive-text-color: var(--dark-text-color);
    }
+
+    /* This was the only way I could get my fill color to change without
+    embedding the svg. Using `fill=currentColor` and setting color did not work. */
+    .add-invert-filter-if-dark {
+        filter: invert(100%);
+    }
 }
 
 
