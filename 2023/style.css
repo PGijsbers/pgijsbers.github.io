@@ -145,6 +145,10 @@ footer {
     height: 25vh;
     object-fit: cover;
     border-radius: 40px;
+
+    /* otherwise the bottom of the image will be mis-aligned with the
+    bottom of the overlay: https://stackoverflow.com/a/27999850 */
+    vertical-align: bottom;
 }
 
 .box {
