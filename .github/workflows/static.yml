@@ -1,10 +1,13 @@
 # Simple workflow for deploying static content to GitHub Pages
+# The current workflow also allows up to one preview branch,
+# which is whatever branch is pushed (if it is not master)
+# This is a bit finicky, but I don't expect to need more than
+# one preview at a time at the moment, so it will do.
 name: Deploy static content to Pages
 
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -29,14 +32,27 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout default branch
         uses: actions/checkout@v3
+        with:
+          ref: 'master'
       - name: Setup Pages
         uses: actions/configure-pages@v3
-      - name: Add most recent as root
+      - name: Copy most recent default branch to root
         run: |
           most_recent=$(find . -name "20*" -type d | tail -n1)
           cp -r ${most_recent}/* .
+      - name: Checkout preview branch
+        if: github.ref_name != 'master'
+        uses: actions/checkout@v3
+      - name: Add preview as subdirectory
+        if: github.ref_name != 'master'
+        env:
+          BRANCH: github.ref_name
+        run: |
+          most_recent=$(find . -name "20*" -type d | tail -n1)
+          mkdir -p ${BRANCH}
+          cp -r ${most_recent}/* ${BRANCH}/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
