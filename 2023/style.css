@@ -49,6 +49,7 @@
 html {
     font-size: 16px;
     background-color: var(--adaptive-background-color);
+    font-weight: 400;
 }
 
 @media (min-width: 500px) { html { font-size: 17px; } }
@@ -59,11 +60,13 @@ html {
 h1 {
     color: var(--adaptive-header-1-color);
     padding-bottom: 0.25em;
+    font-weight: 600;
 }
 
 
 h2 {
     color: var(--adaptive-header-2-color);
+    font-weight: 500;
 }
 
 p {
