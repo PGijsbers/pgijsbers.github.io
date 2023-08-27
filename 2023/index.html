@@ -34,12 +34,57 @@
        class="box">
         <div class="overlay"></div>
         <h1 class="tile-text upper-case">papers</h1>
-        <img class="tile" src="img/boats-square-50.jpg" alt="Go to list of papers written by Pieter">
+        <picture>
+            <source
+                    type="image/avif"
+                    srcset="img/boats/boats-640-q10.avif 640w,
+                            img/boats/boats-960-q8.avif 960w,
+                            img/boats/boats-1280-q6.avif 1280w,
+                            img/boats/boats-1920-q6.avif 1920w"
+            />
+            <source
+                    type="image/jpg"
+                    srcset="img/boats/boats-320-q25.jpg 320w,
+                            img/boats/boats-480-q19.jpg 480w,
+                            img/boats/boats-640-q19.jpg 640w,
+                            img/boats/boats-960-q17.jpg 960w,
+                            img/boats/boats-1280-q15.jpg 1280w,
+                            img/boats/boats-1920-q15.jpg 1920w"
+            />
+            <img class="tile"
+                src="img/boats/boats-1280-q15.jpg"
+                alt="Go to list of papers written by Pieter"
+                sizes="(max-width: 500px) 80vw, 25vw"
+            >
+        </picture>
     </a>
     <a href="https://github.com/PGijsbers" class="box">
         <div class="overlay"></div>
         <h1 class="tile-text upper-case">software</h1>
-        <img class="tile" src="img/robots.jpg" alt="Go to overview of software written by Pieter">
+        <picture>
+            <source
+                    type="image/avif"
+                    srcset="img/robots/robots-brown-640-q25.avif 640w,
+                            img/robots/robots-brown-960-q17.avif 960w,
+                            img/robots/robots-brown-1280-q15.avif 1280w,
+                            img/robots/robots-brown-1920-q10.avif 1920w"
+            />
+            <source
+                    type="image/jpg"
+                    srcset="img/robots/robots-brown-320-q60.jpg 320w,
+                            img/robots/robots-brown-480-q30.jpg 480w,
+                            img/robots/robots-brown-640-q30.jpg 640w,
+                            img/robots/robots-brown-960-q20.jpg 960w,
+                            img/robots/robots-brown-1280-q17.jpg 1280w,
+                            img/robots/robots-brown-1920-q10.jpg 1920w"
+            />
+            <img
+                    class="tile"
+                    sizes="(max-width: 500px) 80vw, 25vw"
+                    src="img/robots/robots-brown-1280-q17.jpg"
+                    alt="Go to overview of software written by Pieter"
+            >
+        </picture>
     </a>
 </nav>
 <address class="contact-container">
