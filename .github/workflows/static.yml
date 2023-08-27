@@ -3,6 +3,7 @@
 # which is whatever branch is pushed (if it is not master)
 # This is a bit finicky, but I don't expect to need more than
 # one preview at a time at the moment, so it will do.
+# It would be nicer if I could just "add" to the artifact instead.
 name: Deploy static content to Pages
 
 on:
@@ -38,21 +39,25 @@ jobs:
           ref: 'master'
       - name: Setup Pages
         uses: actions/configure-pages@v3
-      - name: Copy most recent default branch to root
+      - name: Copy most recent default branch to temporary directory
         run: |
-          most_recent=$(find . -name "20*" -type d | tail -n1)
-          cp -r ${most_recent}/* .
+          most_recent=$(find . -name "20*" -type d | sort | tail -n1)
+          mkdir ../tmp
+          cp -r ${most_recent}/* ../tmp/
       - name: Checkout preview branch
         if: github.ref_name != 'master'
         uses: actions/checkout@v3
       - name: Add preview as subdirectory
         if: github.ref_name != 'master'
         env:
-          BRANCH: github.ref_name
+          BRANCH: ${{ github.ref_name }}
         run: |
-          most_recent=$(find . -name "20*" -type d | tail -n1)
+          most_recent=$(find . -name "20*" -type d | sort | tail -n1)
           mkdir -p ${BRANCH}
           cp -r ${most_recent}/* ${BRANCH}/
+      - name: Copy main branch temporary directory to current
+        run: |
+          cp -r ../tmp/* .
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
