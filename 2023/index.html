@@ -26,7 +26,25 @@
     <a href="about.html" class="box about-tile">
         <div class="overlay"></div>
         <h1 class="tile-text upper-case">about</h1>
-        <img class="tile" src="img/me-ar-2-1-q15.jpg" alt="Go to about page">
+        <picture>
+            <source
+                    type="image/avif"
+                    srcset="img/landscape/pieter_halfdome-640-q28.avif 640w,
+                            img/landscape/pieter_halfdome-960-q20.avif 960w,
+                            img/landscape/pieter_halfdome-1920-q20.avif 1920w,
+                            img/landscape/pieter_halfdome-3840-q25.avif 38400w"
+            />
+            <source
+                    type="image/jpg"
+                    srcset="img/landscape/pieter_halfdome-960-q30.jpg 960w,
+                            img/landscape/pieter_halfdome-1920-q30.jpg 1920w"
+            />
+            <img class="tile"
+                src="img/landscape/pieter_halfdome-1920-q30.jpg"
+                alt="Go to about page"
+                sizes="(max-width: 500px) 80vw, 50vw"
+            >
+        </picture>
     </a>
     <a href="https://scholar.google.com/citations?hl=en&user=Za3OsTwAAAAJ"
        class="box">
