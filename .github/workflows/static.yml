@@ -49,8 +49,8 @@ jobs:
       - name: Build Default Branch
         run: |
           cd 2023
-          python build.py --output-directory=../build
-          ls -lah ../build
+          python build.py --output-directory=../../build
+          ls -lah ../../build
 
       - name: Checkout preview branch
         if: github.ref_name != 'master'
@@ -61,7 +61,7 @@ jobs:
           BRANCH: ${{ github.ref_name }}
         run: |
           cd 2023
-          python build.py --output-directory=../build/${BRANCH}
+          python build.py --output-directory=../../build/${BRANCH}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
