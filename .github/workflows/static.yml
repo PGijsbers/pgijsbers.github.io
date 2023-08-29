@@ -50,6 +50,7 @@ jobs:
         run: |
           cd 2023
           python build.py --output-directory=../build
+          ls -lah ../build
 
       - name: Checkout preview branch
         if: github.ref_name != 'master'
