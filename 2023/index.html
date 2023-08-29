@@ -26,7 +26,26 @@
     <a href="about.html" class="box about-tile">
         <div class="overlay"></div>
         <h1 class="tile-text upper-case">about</h1>
-        <img class="tile" src="img/me-ar-2-1-q15.jpg" alt="Go to about page">
+        <picture>
+            <source
+                    type="image/avif"
+                    srcset="img/landscape/pieter_halfdome-640-q28.avif 640w,
+                            img/landscape/pieter_halfdome-960-q20.avif 960w,
+                            img/landscape/pieter_halfdome-1920-q20.avif 1920w,
+                            img/landscape/pieter_halfdome-3840-q25.avif 3840w"
+                    sizes="(max-width: 500px) 80vw, 50vw"
+            />
+            <source
+                    type="image/jpg"
+                    srcset="img/landscape/pieter_halfdome-960-q30.jpg 960w,
+                            img/landscape/pieter_halfdome-1920-q30.jpg 1920w"
+                    sizes="(max-width: 500px) 80vw, 50vw"
+            />
+            <img class="tile"
+                src="img/landscape/pieter_halfdome-1920-q30.jpg"
+                alt="Go to about page"
+            >
+        </picture>
     </a>
     <a href="https://scholar.google.com/citations?hl=en&user=Za3OsTwAAAAJ"
        class="box">
@@ -39,6 +58,7 @@
                             img/boats/boats-960-q8.avif 960w,
                             img/boats/boats-1280-q6.avif 1280w,
                             img/boats/boats-1920-q6.avif 1920w"
+                    sizes="(max-width: 500px) 80vw, 25vw"
             />
             <source
                     type="image/jpg"
@@ -48,11 +68,11 @@
                             img/boats/boats-960-q17.jpg 960w,
                             img/boats/boats-1280-q15.jpg 1280w,
                             img/boats/boats-1920-q15.jpg 1920w"
+                    sizes="(max-width: 500px) 80vw, 25vw"
             />
             <img class="tile"
                 src="img/boats/boats-1280-q15.jpg"
                 alt="Go to list of papers written by Pieter"
-                sizes="(max-width: 500px) 80vw, 25vw"
             >
         </picture>
     </a>
@@ -66,6 +86,7 @@
                             img/robots/robots-brown-960-q17.avif 960w,
                             img/robots/robots-brown-1280-q15.avif 1280w,
                             img/robots/robots-brown-1920-q10.avif 1920w"
+                    sizes="(max-width: 500px) 80vw, 25vw"
             />
             <source
                     type="image/jpg"
@@ -75,10 +96,10 @@
                             img/robots/robots-brown-960-q20.jpg 960w,
                             img/robots/robots-brown-1280-q17.jpg 1280w,
                             img/robots/robots-brown-1920-q10.jpg 1920w"
+                    sizes="(max-width: 500px) 80vw, 25vw"
             />
             <img
                     class="tile"
-                    sizes="(max-width: 500px) 80vw, 25vw"
                     src="img/robots/robots-brown-1280-q17.jpg"
                     alt="Go to overview of software written by Pieter"
             >
