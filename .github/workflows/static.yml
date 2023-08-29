@@ -27,23 +27,30 @@ concurrency:
 
 jobs:
   # Single deploy job since we're just deploying
+  # TODO: When other build functions are added, distribute preparing files to separate parallel jobs.
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Setup Python
+        uses: actions/setup-python@v4
       - name: Checkout default branch
         uses: actions/checkout@v3
         with:
           ref: 'master'
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Copy most recent default branch to temporary directory
+      - name: Install Dependencies
         run: |
-          most_recent=$(find . -name "20*" -type d | sort | tail -n1)
-          mkdir ../tmp
-          cp -r ${most_recent}/* ../tmp/
+          python -m pip install --upgrade pip
+          python -m pip install -r scripts/subsetting/requirements.txt
+      - name: Build Default Branch
+        run: |
+          cd 2023
+          python build.py --output-directory=../build
+
       - name: Checkout preview branch
         if: github.ref_name != 'master'
         uses: actions/checkout@v3
@@ -52,17 +59,13 @@ jobs:
         env:
           BRANCH: ${{ github.ref_name }}
         run: |
-          most_recent=$(find . -name "20*" -type d | sort | tail -n1)
-          mkdir -p ${BRANCH}
-          cp -r ${most_recent}/* ${BRANCH}/
-      - name: Copy main branch temporary directory to current
-        run: |
-          cp -r ../tmp/* .
+          cd 2023
+          python build.py --output-directory=../build/${BRANCH}
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          # Upload entire repository
-          path: '.'
+          path: '../build'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
