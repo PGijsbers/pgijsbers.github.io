@@ -20,7 +20,21 @@
 </nav>
 <main>
     <h1>Pieter Gijsbers</h1>
-    <img src="img/portrait-q15.jpg" class="portrait-picture" alt="Portait picture of Pieter Gijsbers">
+    <picture>
+        <source
+                type="image/avif"
+                srcset="img/portrait/portrait-400.avif 400w,
+                        img/portrait/portrait-600.avif 600w"
+                sizes="200px"
+        />
+        <source
+                type="image/jpg"
+                srcset="img/portrait/portrait-400.jpg 400w,
+                        img/portrait/portrait-600.jpg 600w,"
+                sizes="200px"
+        />
+        <img src="img/portrait/portrait-q15.jpg" class="portrait-picture" alt="Portrait picture of Pieter Gijsbers">
+    </picture>
     <p>
         Hi! I am a research engineer at Eindhoven University of Technology
         (TU/e) in <a href="https://joaquinvanschoren.github.io/home/">Joaquin
