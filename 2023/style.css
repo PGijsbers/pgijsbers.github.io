@@ -248,6 +248,7 @@ a:hover > .overlay {
     border-radius: 20px;
     float: right;
     margin-left: 1.1em;
+    aspect-ratio: 4/5;
 }
 
 .no-padding-bottom {
