@@ -18,17 +18,20 @@
     --light-header-1-color: #212529;
     --light-header-2-color: #343a40;
     --light-text-color: #495057;
+    --light-faded-color: #adb5bd;
 
     --dark-background-color: #212529;
     --dark-header-1-color: #f8f9fa;
     --dark-header-2-color: #f1f3f5;
     --dark-text-color: #e9ecef;
+    --dark-faded-color: #ced4da;
 
 
     --adaptive-background-color: var(--light-background-color);
     --adaptive-header-1-color: var(--light-header-1-color);
     --adaptive-header-2-color: var(--light-header-2-color);
     --adaptive-text-color: var(--light-text-color);
+    --adaptive-faded-color: var(--light-faded-color);
 }
 
 @media(prefers-color-scheme: dark) {
@@ -162,7 +165,7 @@ footer {
     vertical-align: bottom;
 }
 
-.box {
+.relative {
     position: relative;
 }
 
@@ -253,4 +256,34 @@ a:hover > .overlay {
 
 .no-padding-bottom {
     padding-bottom: 0;
+}
+
+.about-section {
+    padding-bottom: 2em;
+}
+
+.about-title {
+    /* user agent style sheets override section > h1 font-size. */
+    font-size: 2em;
+}
+
+
+.degree-margin {
+    position: absolute;
+    top: 0;
+    left: -3.5em;
+    width: 3em;
+    font-size: 3em;
+    color: var(--adaptive-faded-color);
+    text-align: right;
+}
+
+.year-and-institution {
+    font-weight: 400;
+    font-size: 1em;
+    padding-bottom: 0.4em;
+}
+
+.education {
+    margin-bottom: 1em;
 }
