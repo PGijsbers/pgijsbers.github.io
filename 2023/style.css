@@ -278,8 +278,27 @@ a:hover > .overlay {
     text-align: right;
 }
 
+.degree-short {
+    display: none;
+}
+
+/* Degree does not fit in the margin anymore */
+@media (max-width: 750px) {
+    .degree-margin {
+        display: none;
+    }
+
+    .degree-short {
+        display: block;
+    }
+
+    .degree-long {
+        display: none;
+    }
+}
+
 .year-and-institution {
-    font-weight: 400;
+    font-weight: 450;
     font-size: 1em;
     padding-bottom: 0.4em;
 }
