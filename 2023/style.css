@@ -73,7 +73,7 @@ h2 {
     font-weight: 500;
 }
 
-p {
+p, ul {
     padding-bottom: 0.8em;
 }
 
