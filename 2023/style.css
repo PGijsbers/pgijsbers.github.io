@@ -259,7 +259,7 @@ a:hover > .overlay {
 }
 
 .about-section {
-    padding-bottom: 2em;
+    padding-bottom: 1em;
 }
 
 .about-title {
@@ -304,5 +304,5 @@ a:hover > .overlay {
 }
 
 .education {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
