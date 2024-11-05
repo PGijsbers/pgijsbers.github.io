@@ -16,8 +16,6 @@ nav {
     justify-content: center;
 }
 
-nav > h1 {
-}
 .centered-column {
     display: flex;
     justify-content: center;
@@ -30,68 +28,43 @@ nav > h1 {
     position: relative;
 }
 
-.canvas > div {
-    width: 100%;
-}
-
 #a {
-    background: white;
-    display: block;
     width: 20%;
     height: 40%;
-    position: absolute;
 }
 
 #b {
-    background: white;
-    display: block;
     width: 20%;
     height: 39%;
-    position: absolute;
     top: 41%;
 
 }
 #c {
-    background: blue;
-    display: block;
     width: 20%;
     height: 19%;
-    position: absolute;
     top: 81%;
 }
 #d {
-    background: red;
-    display: block;
     width: 79%;
     height: 80%;
-    position: absolute;
     left: 21%;
 }
 
 #e {
-    background: white;
-    display: block;
     width: 69%;
     height: 19%;
-    position: absolute;
     left: 21%;
     top: 81%;
 }
 #f {
-    background: white;
-    display: block;
     width: 9%;
     height: 9%;
-    position: absolute;
     left: 91%;
     top: 81%;
 }
 #g {
-    background: yellow;
-    display: block;
     width: 9%;
     height: 9%;
-    position: absolute;
     left: 91%;
     top: 91%;
 }
@@ -102,44 +75,49 @@ nav > h1 {
    display: block;
 }
 #line1{
-    background: black;
-    display: block;
     width: 1%;
     height: 100%;
-    position: absolute;
     left: 20%;
 }
 #line2{
-    background: black;
-    display: block;
     width: 100%;
     height: 1%;
-    position: absolute;
     top: 80%;
 }
 #line3{
-    background: black;
-    display: block;
     width: 20%;
     height: 1%;
-    position: absolute;
     top: 40%;
 }
 #line4{
-    background: black;
-    display: block;
     width: 10%;
     height: 1%;
-    position: absolute;
     top: 90%;
     left: 90%;
 }
 #line5{
-    background: black;
-    display: block;
     width: 1%;
     height: 20%;
-    position: absolute;
     top: 80%;
     left: 90%;
+}
+
+.black {
+    background: black;
+}
+.red {
+    background: red;
+}
+.yellow {
+    background: yellow;
+}
+.blue {
+    background: blue;
+}
+.white {
+    background: white;
+}
+.absolute-block {
+    position: absolute;
+    display: block;
 }
