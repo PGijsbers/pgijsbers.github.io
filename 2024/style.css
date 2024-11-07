@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+:root {
+    --column-width: 90vh;
+    --margin-width: calc((100vw - var(--column-width)) / 2);
+}
+
 body {
     background: #FFCF9D;
 }
@@ -17,8 +22,8 @@ nav {
 }
 
 .centered-column {
-    margin-left: calc((100vw - 90vh) / 2);
-    margin-right: calc((100vw - 90vh) / 2);
+    margin-left: var(--margin-width);
+    margin-right: var(--margin-width);
 }
 
 .canvas {
@@ -84,6 +89,12 @@ nav {
 }
 *:hover > .show-on-hover-parent {
    display: block;
+}
+* > .right-of-parent {
+    position: absolute;
+    width: var(--margin-width);
+    left: calc(100% + 2rem);
+    top: 40%;
 }
 #line1{
     width: 1%;
