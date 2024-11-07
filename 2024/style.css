@@ -17,8 +17,8 @@ nav {
 }
 
 .centered-column {
-    display: flex;
-    justify-content: center;
+    margin-left: calc((100vw - 90vh) / 2);
+    margin-right: calc((100vw - 90vh) / 2);
 }
 
 .canvas {
@@ -26,6 +26,10 @@ nav {
     height: 90vh;
     aspect-ratio: 1;
     position: relative;
+}
+
+.medium-margin-bottom {
+   margin-bottom: 2rem;
 }
 
 #a {
@@ -75,10 +79,10 @@ nav {
     animation-delay: 500ms;
     animation-fill-mode: both;
 }
-#cool {
+.show-on-hover-parent {
     display: none;
 }
-#d:hover > div {
+*:hover > .show-on-hover-parent {
    display: block;
 }
 #line1{
