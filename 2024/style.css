@@ -96,6 +96,13 @@ nav {
     left: calc(100% + 2rem);
     top: 40%;
 }
+* > .left-of-parent {
+    position: absolute;
+    width: var(--margin-width);
+    right: calc(100% + 2rem);
+    top: 40%;
+    text-align: end;
+}
 #line1{
     width: 1%;
     height: 100%;
@@ -163,11 +170,20 @@ nav {
 .red {
     background: red;
 }
+.red-text {
+    color: red;
+}
 .yellow {
     background: yellow;
 }
+.yellow-text {
+    color: yellow;
+}
 .blue {
     background: blue;
+}
+.blue-text {
+    color: blue;
 }
 .white {
     background: white;
