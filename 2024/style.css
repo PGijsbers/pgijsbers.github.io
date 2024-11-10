@@ -4,7 +4,7 @@
 }
 
 :root {
-    --column-width: 90vh;
+    --column-width: min(90vh, 80vw);
     --margin-width: calc((100vw - var(--column-width)) / 2);
 }
 
@@ -29,7 +29,6 @@ nav {
 
 .canvas {
     background: whitesmoke;
-    height: 90vh;
     aspect-ratio: 1;
     position: relative;
 }
