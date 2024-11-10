@@ -6,6 +6,10 @@
 :root {
     --column-width: min(90vh, 80vw);
     --margin-width: calc((100vw - var(--column-width)) / 2);
+
+    --commit-color: red;
+    --review-color: blue;
+    --comment-color: yellow;
 }
 
 body {
@@ -34,8 +38,31 @@ nav {
     position: relative;
 }
 
+.right-aligned {
+    text-align: end;
+}
 .medium-margin-bottom {
    margin-bottom: 2rem;
+}
+
+.small-margin-bottom {
+   margin-bottom: 1rem;
+}
+
+.tiny-margin-bottom {
+    margin-bottom: 0.5rem;
+}
+
+.commit-color {
+    color: var(--commit-color);
+}
+
+.comment-color {
+    color: var(--comment-color);
+}
+
+.review-color {
+    color: var(--review-color);
 }
 
 #a {
