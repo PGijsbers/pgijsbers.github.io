@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+    color: var(--adaptive-text-color)
+}
+
+:root {
+    --light-background-color: transparent;
+    --light-text-color: black;
+    --dark-background-color: #212529;
+    --dark-text-color: white;
+    --adaptive-background-color: var(--light-background-color);
+}
+
+@media(prefers-color-scheme: dark) {
+    :root {
+        --adaptive-background-color: var(--dark-background-color);
+        --adaptive-text-color: var(--dark-text-color)
+    }
+}
+
+body {
+    background-color: var(--adaptive-background-color);
+}
+
+a {
+    text-transform: uppercase;
+}
