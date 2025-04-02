@@ -9,7 +9,7 @@
 :root {
     --light-background-color: transparent;
     --light-text-color: black;
-    --dark-background-color: #212529;
+    --dark-background-color: #111519;
     --dark-text-color: white;
     --adaptive-background-color: var(--light-background-color);
 }
