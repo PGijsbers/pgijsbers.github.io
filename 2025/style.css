@@ -20,17 +20,21 @@
             "Consolas", "Courier New", monospace;
     --sansserif-fontstack: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 
-    --light-background-color: transparent;
+    --light-background-color: white;
     --light-text-color: black;
     --dark-background-color: #111519;
     --dark-text-color: white;
     --adaptive-background-color: var(--light-background-color);
+    --neg-adaptive-background-color: var(--dark-background-color);
+    --neg-adaptive-text-color: var(--dark-text-color);
 }
 
 @media(prefers-color-scheme: dark) {
     :root {
         --adaptive-background-color: var(--dark-background-color);
-        --adaptive-text-color: var(--dark-text-color)
+        --adaptive-text-color: var(--dark-text-color);
+        --neg-adaptive-background-color: var(--light-background-color);
+        --neg-adaptive-text-color: var(--light-text-color);
     }
 }
 
@@ -47,18 +51,38 @@ body {
     margin: 0 clamp(10vw, calc(300px - (1200px - 100vw) / 2.8), 25vw);
 }
 
-nav > a {
-    text-transform: uppercase;
-    text-decoration: none;
-}
-
 h1, h2 {
     font-family: var(--monospaced-fontstack);
 }
 
 address {
-    margin-top: auto;
     font-style: normal;
+}
+
+.bottom {
+    margin-top: auto;
+}
+
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+nav > a {
+    text-decoration: none;
+}
+
+.round-border-button {
+    border-radius:1em;
+    padding: 0.5em 1em;
+    border: solid;
+    border-color: var(--neg-adaptive-background-color);
+    font-weight: bold;
+    text-align: center;
+}
+.round-border-button:hover {
+    background-color: var(--neg-adaptive-background-color);
+    color: var(--neg-adaptive-text-color);
 }
 
 footer {
