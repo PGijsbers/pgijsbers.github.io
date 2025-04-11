@@ -39,8 +39,17 @@
     }
 }
 
-body {
+html {
+    font-size: 16px;
     background-color: var(--adaptive-background-color);
+    font-weight: 400;
+}
+
+@media (min-width: 500px) { html { font-size: 17px; } }
+@media (min-width: 630px) { html { font-size: 18px; } }
+@media (min-width: 1600px) { html { font-size: calc(18px + ((100vw - 1600px) / 84)); } }
+
+body {
     min-height: 100vh;
 
     display: flex;
