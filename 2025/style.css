@@ -61,6 +61,11 @@ body {
     margin: 0 clamp(10vw, calc(300px - (1200px - 100vw) / 2.8), 25vw);
 }
 
+.bigger-margins {
+    /* Scale padding from 0vw (at 500px) to 10vw (at 1200px), based on eye-balling. */
+    margin: 0 clamp(0vw, calc(120px - (1200px - 100vw) / 5.8), 10vw);
+}
+
 
 h1, h2 {
     font-family: var(--monospaced-fontstack);
