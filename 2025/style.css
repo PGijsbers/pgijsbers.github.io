@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--sansserif-fontstack);
+    /*font-family: var(--monospaced-fontstack);*/
+    color: var(--adaptive-text-color)
+}
+
+:root {
+    --monospaced-fontstack:
+            ui-monospace,
+            Menlo, Monaco,
+            "Cascadia Mono", "Segoe UI Mono",
+            "Roboto Mono",
+            "Oxygen Mono",
+            "Ubuntu Mono",
+            "Source Code Pro",
+            "Fira Mono",
+            "Droid Sans Mono",
+            "Consolas", "Courier New", monospace;
+    --sansserif-fontstack: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+
+    --light-background-color: white;
+    --light-text-color: black;
+    --dark-background-color: #111519;
+    --dark-text-color: white;
+    --adaptive-background-color: var(--light-background-color);
+    --neg-adaptive-background-color: var(--dark-background-color);
+    --neg-adaptive-text-color: var(--dark-text-color);
+}
+
+@media(prefers-color-scheme: dark) {
+    :root {
+        --adaptive-background-color: var(--dark-background-color);
+        --adaptive-text-color: var(--dark-text-color);
+        --neg-adaptive-background-color: var(--light-background-color);
+        --neg-adaptive-text-color: var(--light-text-color);
+    }
+}
+
+html {
+    font-size: 16px;
+    background-color: var(--adaptive-background-color);
+    font-weight: 400;
+}
+
+@media (min-width: 500px) { html { font-size: 17px; } }
+@media (min-width: 630px) { html { font-size: 18px; } }
+@media (min-width: 1600px) { html { font-size: calc(18px + ((100vw - 1600px) / 84)); } }
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+
+    /* Scale padding from 10vw (at 500px) to 25vw (at 1200px), based on eye-balling. */
+    margin: 0 clamp(10vw, calc(300px - (1200px - 100vw) / 2.8), 25vw);
+}
+
+.bigger-margins {
+    /* Scale padding from 0vw (at 500px) to 10vw (at 1200px), based on eye-balling. */
+    margin: 0 clamp(0vw, calc(120px - (1200px - 100vw) / 5.8), 10vw);
+}
+
+
+h1, h2 {
+    font-family: var(--monospaced-fontstack);
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h3, h4 {
+    font-family: var(--monospaced-fontstack);
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+
+address {
+    font-style: normal;
+}
+
+.bottom {
+    margin-top: auto;
+}
+
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+nav > a {
+    text-decoration: none;
+}
+
+.round-border-button {
+    border-radius:1em;
+    padding: 0.5em 1em;
+    border: solid;
+    border-color: var(--neg-adaptive-background-color);
+    font-weight: bold;
+    text-align: center;
+}
+.round-border-button:hover {
+    background-color: var(--neg-adaptive-background-color);
+    color: var(--neg-adaptive-text-color);
+}
+
+footer {
+    /* Together with min-height of 100vh of the flex-container parent
+    this ensures that the footer is always placed at the bottom.
+    */
+    /*margin-top: auto;*/
+    font-size: 0.8em;
+    font-family: var(--monospaced-fontstack);
+    margin-bottom: 1em;
+}
